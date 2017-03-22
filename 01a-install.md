@@ -56,7 +56,7 @@ How can you check the version of Python installed if you happen to be on an unfa
 
 >> Python 3.5.2 :: Anaconda 4.1.1 (x86_64)
 >> To check version of Python, at command prompt type the following command:
-Python --version
+python --version
 
  
 
