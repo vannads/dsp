@@ -48,13 +48,15 @@ cross-platform.
 
 Did you install Python 2 or 3? Why?  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Python Version 3 is the latest and most supported version
 
 ###Q2. Which Python Version Installed   
 
 How can you check the version of Python installed if you happen to be on an unfamiliar computer?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Python 3.5.2 :: Anaconda 4.1.1 (x86_64)
+>> To check version of Python use this at command prompt
+Python --version
 
  
 
