@@ -77,7 +77,13 @@ ls -l dirName | List contents of the directory, dirName, in long format
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+**xargs** is a command that takes output of a command and pass it as argument of another command. If no command is supplied as argument to **xargs**, the default command executed is **echo**. Here's two examples showing uses of **xargs**
+
+(1) To count number of lines in *.txt* files in the current directory
+ls *.txt | xargs wc -l
+
+(2) To zip all *.txt.* files in the current directory
+find . -name '*.txt' | xargs zip -9 txt.zip
 
  
 
