@@ -45,7 +45,7 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > Answer below:
+> > 
 Command | Description
 -----|---------
 ls | List directory contents
@@ -61,7 +61,6 @@ ls -Glp | List directory contents in long format, show a slash ('/') after direc
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > Answer below:
 
 Command | Description
 -----|---------
