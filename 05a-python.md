@@ -28,7 +28,12 @@ How are Python lists and sets similar and different? Give examples of using both
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
 >> A lambda function is an anonymous function expressed as a single statement.
-'''
+
+```
+print "hello world!"
+print "hello moon"
+```
+
 #Example
 #2016 Sales figures of Top 5 sales person across 4 regions in USA 
 # Each sales_person record is a tuple, elements are: salesPersonName, region, sales_in_$M
@@ -40,7 +45,7 @@ print(sortedList)
 
 #-Outout-
 [('Kate', 'EC', 29), ('Adam', 'SW', 28), ('Kathy', 'NW', 24), ('Paul', 'NW', 20), ('John', 'EC', 18)]
-'''
+
 ---
 
 ### Q4. List Comprehension, Map &amp; Filter
