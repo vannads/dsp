@@ -14,7 +14,7 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 >> Similarity is that lists and tuples are sequences in Python. The main difference is - **lists are mutable**, the elements are usually homogeneus that are accessed by iterating over the list -- whereas **tuples are immutable**, the elements usually contain a heterogenous sequence of elements that are accessed via unpacking or indexing. Though tuples may seem similar to lists, they are oftne used in different situations and for different purposes. Index in a tuple has an implied sematic, but not in lists as it is mutable. 
 
-**Tuples are usable as dictionary keys**, while lists are not. The reason is Python dictionary implementation requires that key objects provide a "hash" implementation. The hash implementation uses a hash value calculated from the key value to find the key. If the key were a mutable object (lists in this case), its value could change, and its hash value. This can lead to unexpected results in dictionary look up. 
+Tuples are usable as dictionary keys, while lists are not. The reason is Python dictionary implementation requires that key objects provide a "hash" implementation. The hash implementation uses a hash value calculated from the key value to find the key. If the key were a mutable object (lists in this case), its value could change, and its hash value. This can lead to unexpected results in dictionary look up. 
 ---
 
 ### Q2. Lists &amp; Sets
@@ -31,10 +31,9 @@ In terms of performance - sets are significantly faster when it comes to members
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> A **lambda** function is an anonymous function expressed as a single statement.
+>> A lambda function is an anonymous function expressed as a single statement.
 
-#Example: 
-# -*- coding: utf-8 -*- 
+#Example
 #2016 Sales figures of Top 5 sales person across 4 regions in USA 
 # Each sales_person record is a tuple, elements are: salesPersonName, region, sales_in_$M
 #...................................................
