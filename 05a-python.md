@@ -12,15 +12,18 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Similarity is that lists and tuples are sequences in Python. The main difference is - **lists are mutable**, the elements are usually homogeneus that are accessed by iterating over the list -- whereas **tuples are immutable**, the elements usually contain a heterogenous sequence of elements that are accessed via unpacking or indexing. Though tuples may seem similar to lists, they are oftne used in different situations and for different purposes. Index in a tuple has an implied sematic, but not in lists as it is mutable. 
 
+**Tuples are usable as dictionary keys**, while lists are not. The reason is Python dictionary implementation requires that key objects provide a "hash" implementation. The hash implementation uses a hash value calculated from the key value to find the key. If the key were a mutable object (lists in this case), its value could change, and its hash value. This can lead to unexpected results in dictionary look up. 
 ---
 
 ### Q2. Lists &amp; Sets
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Similarity is that lists and sets are Python collections - sequences of arbitray items. The main difference is that a list is an ordered collection which can have duplicate elements, where as a set is an unordered collection with NO duplicate elements. 
+
+In terms of performance - sets are significantly faster when it comes to membership testing, especially for large sets. That is because the set uses a hash function to map to a bucket. Since Python automatically resize the hash table the speed can be constant irrespective of the size of the set. for membership testing in lists Python has to compare every single member for equality (sequential lookup) and it can be slower.At the same time sets are slower than lists when it comes to iterating over its contents.
 
 ---
 
@@ -28,7 +31,20 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> A **lambda** function is an anonymous function expressed as a single statement.
+
+#Example: 
+# -*- coding: utf-8 -*- 
+#2016 Sales figures of Top 5 sales person across 4 regions in USA 
+# Each sales_person record is a tuple, elements are: salesPersonName, region, sales_in_$M
+#...................................................
+sales_2016 = [('Kathy', 'NW', 24), ('John', 'EC', 18), 
+              ('Adam', 'SW', 28), ('Paul', 'NW', 20), ('Kate', 'EC', 29)]
+sortedList = sorted(sales_2016, key=lambda sales: sales[2], reverse = True)
+print(sortedList)
+
+#-Outout-
+[('Kate', 'EC', 29), ('Adam', 'SW', 28), ('Kathy', 'NW', 24), ('Paul', 'NW', 20), ('John', 'EC', 18)]
 
 ---
 
@@ -36,7 +52,32 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> In Python, a comprehension is a compact way of creating data structures from one or more iterators. They make it easy to combine loops and conditional tests with minimal syntax.
+
+List comprehension is an elegant way to define and create lists in Python. If defined well, it is a complete substitute for the **lambda** function as wells as the functions **map(), filter(), and reduce()**
+
+#Using list Comprehension
+odd_numbers = [x for x in range(1,10) if x % 2 == 1]
+print(odd_numbers)
+#-Outout-
+[1, 3, 5, 7, 9]
+
+#Using filter() and lambda()
+odd_numbers = list(filter(lambda x: x % 2, range(1,10)))
+print(odd_numbers)
+#-Outout-
+[1, 3, 5, 7, 9]
+
+#Using map()
+def odd(x):
+    if (x % 2 == 1):
+        return x
+        
+odd_numbers = list(map(odd, range(1,10)))
+print(odd_numbers)
+#-Outout-
+[1, None, 3, None, 5, None, 7, None, 9]
+Here it maps all values, return value if it is odd, and 'None' for even. It's a bit tricky to use map function in this case as function returns 'None' for false condictions.
 
 ---
 
@@ -51,7 +92,7 @@ date_start = '01-02-2013'
 date_stop = '07-28-2015'
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 937
 
 b.  
 ```
@@ -59,7 +100,7 @@ date_start = '12312013'
 date_stop = '05282015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 513
 
 c.  
 ```
@@ -67,7 +108,7 @@ date_start = '15-Jan-1994'
 date_stop = '14-Jul-2015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE  (answer will be in number of days)
+>> 7850
 
 Place code in this file: [q5_datetime.py](python/q5_datetime.py)
 
