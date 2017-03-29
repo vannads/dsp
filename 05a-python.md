@@ -19,9 +19,7 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> Similarity is that lists and sets are Python collections - sequences of arbitray items. The main difference is that a list is an ordered collection which can have duplicate elements, where as a set is an unordered collection with NO duplicate elements. 
-
-In terms of performance - sets are significantly faster when it comes to membership testing, especially for large sets. That is because the set uses a hash function to map to a bucket. Since Python automatically resize the hash table the speed can be constant irrespective of the size of the set. for membership testing in lists Python has to compare every single member for equality (sequential lookup) and it can be slower.At the same time sets are slower than lists when it comes to iterating over its contents.
+>> Similarity is that lists and sets are Python collections - sequences of arbitray items. The main difference is that a list is an ordered collection which can have duplicate elements, where as a set is an unordered collection with NO duplicate elements. In terms of performance - sets are significantly faster when it comes to membership testing, especially for large sets. That is because the set uses a hash function to map to a bucket. Since Python automatically resize the hash table the speed can be constant irrespective of the size of the set. for membership testing in lists Python has to compare every single member for equality (sequential lookup) and it can be slower.At the same time sets are slower than lists when it comes to iterating over its contents.
 
 ---
 
@@ -30,7 +28,7 @@ In terms of performance - sets are significantly faster when it comes to members
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
 >> A lambda function is an anonymous function expressed as a single statement.
-
+'''
 #Example
 #2016 Sales figures of Top 5 sales person across 4 regions in USA 
 # Each sales_person record is a tuple, elements are: salesPersonName, region, sales_in_$M
@@ -42,7 +40,7 @@ print(sortedList)
 
 #-Outout-
 [('Kate', 'EC', 29), ('Adam', 'SW', 28), ('Kathy', 'NW', 24), ('Paul', 'NW', 20), ('John', 'EC', 18)]
-
+'''
 ---
 
 ### Q4. List Comprehension, Map &amp; Filter
