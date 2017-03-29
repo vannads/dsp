@@ -55,7 +55,7 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
 >> In Python, a comprehension is a compact way of creating data structures from one or more iterators. They make it easy to combine loops and conditional tests with minimal syntax.
 
 List comprehension is an elegant way to define and create lists in Python. If defined well, it is a complete substitute for the **lambda** function as wells as the functions **map(), filter(), and reduce()**
-
+```
 #Using list Comprehension
 odd_numbers = [x for x in range(1,10) if x % 2 == 1]
 print(odd_numbers)
@@ -78,7 +78,7 @@ print(odd_numbers)
 #-Outout-
 [1, None, 3, None, 5, None, 7, None, 9]
 Here it maps all values, return value if it is odd, and 'None' for even. It's a bit tricky to use map function in this case as function returns 'None' for false condictions.
-
+```
 ---
 
 ### Complete the following problems by editing the files below:
