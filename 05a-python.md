@@ -12,9 +12,7 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> Similarity is that lists and tuples are sequences in Python. The main difference is - **lists are mutable**, the elements are usually homogeneus that are accessed by iterating over the list -- whereas **tuples are immutable**, the elements usually contain a heterogenous sequence of elements that are accessed via unpacking or indexing. Though tuples may seem similar to lists, they are oftne used in different situations and for different purposes. Index in a tuple has an implied sematic, but not in lists as it is mutable. 
-
-Tuples are usable as dictionary keys, while lists are not. The reason is Python dictionary implementation requires that key objects provide a "hash" implementation. The hash implementation uses a hash value calculated from the key value to find the key. If the key were a mutable object (lists in this case), its value could change, and its hash value. This can lead to unexpected results in dictionary look up. 
+>> Similarity is that lists and tuples are sequences in Python. The main difference is - **lists are mutable**, the elements are usually homogeneus that are accessed by iterating over the list -- whereas **tuples are immutable**, the elements usually contain a heterogenous sequence of elements that are accessed via unpacking or indexing. Though tuples may seem similar to lists, they are oftne used in different situations and for different purposes. Index in a tuple has an implied sematic, but not in lists as it is mutable. Tuples are usable as dictionary keys, while lists are not. The reason is Python dictionary implementation requires that key objects provide a "hash" implementation. The hash implementation uses a hash value calculated from the key value to find the key. If the key were a mutable object (lists in this case), its value could change, and its hash value. This can lead to unexpected results in dictionary look up. 
 ---
 
 ### Q2. Lists &amp; Sets
