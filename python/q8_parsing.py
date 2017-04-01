@@ -6,7 +6,7 @@
 
 import csv
 #from pprint import pprint
-infile = csv.DictReader(open("football.csv"))
+infile = csv.DictReader(open("~/football.csv"))
 topTeams = []
 team =()
 for row in infile:
