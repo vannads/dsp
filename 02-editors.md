@@ -81,7 +81,7 @@ Upload these 3 files to the [`editors`](editors/) folder.
 
 What terminal editor will be your preferred choice of use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> **Emacs**. This is the one I am most familiar with.
 
 --
 
@@ -89,6 +89,14 @@ What terminal editor will be your preferred choice of use? How did you make your
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> **Spyder**. It's part of the Anaconda distribution, and it's the first Python IDE I started using. Some of the keyboard shortcuts I use are:
+Cmd+N -- New file
+cmd+O -- Open an existing file
+Cmd+S -- Save file
+F5 -- Run
+Cmd + F5 -- Debug
+F12 -- Set/Clear breakpoints
+
+To customize the editor -- At the IDE navigate to Python/Preferences and select the appropriate preferences one need to customize.
 
  

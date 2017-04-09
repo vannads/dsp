@@ -19,7 +19,18 @@ Here's a list of items with which you should be familiar:
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+Task | Command | Notes/example result
+-----|---------|-------
+Show current working directory path | pwd | /Users/svannadil
+Creating a directory | mkdir temp00 | Creates temp00 under /Users/svannadil
+Deleting a directory | rmdir temp00 | Removes temp00 under /Users/svannadil
+Creating a file using touch command | touch test.txt | Creates a new empty file test.txt, if exists update modification date
+Delecting a file | rm test.txt | Removes test.txt
+Renaming a file | mv test.txt test01.txt | Renames test.txt as test01.txt
+Listing hidden files | ls -a | List all, including hidden files
+Copying a file from one directory to another | cp temp01/test01.txt temp02/ | Copies file test01.txt from directory temp01 to directory temp02
+Copy multiple files into a directory | cp file1.txt file2.py file3.js target/ | Copies file1, file2, and file3 into directory target/
+Recursively copy from one directory to another | cp -R source/ target/ | Recursively copies from source/ to target/ 
 
 ---
 
@@ -34,15 +45,31 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
-
+> > 
+Command | Description
+-----|---------
+ls | List directory contents
+ls -a | List directory contents, including directories whose name begins with a dot (.)
+ls -l | List directory contents in long format
+ls -lh | List directory contents in long format, use unit suffixes (B, K, M, G, T etc.) to reduce the number of digits to 3 or less
+ls -lah | same as above, but include directories whose name begins with a dot (.)
+ls -t | Sort by time modified (recently modified first) before sorting the operands by lexicographical order
+ls -Glp | List directory contents in long format, show a slash ('/') after directory names, and enable colorized output
 ---
 
 ### Q3.  More List Files in Unix  
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+
+Command | Description
+-----|---------
+ls -g | List directory contents in long format, exclude owner name
+ls -go | List directory contents in long format, exclude owner name and group name
+ls -goat | List directory contents in long format, including directories whose name begins with a dot (.), exclude owner name and group name, with newest files first
+ls -m | List files across the page seperated by commas
+ls -l dirName | List contents of the directory, dirName, in long format
+
 
 ---
 
@@ -50,7 +77,13 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+**xargs** is a command that takes output of a command and pass it as argument of another command. If no command is supplied as argument to **xargs**, the default command executed is **echo**. Here's two examples showing uses of **xargs**
+
+(1) To count number of lines in *.txt* files in the current directory
+ls *.txt | xargs wc -l
+
+(2) To zip all *.txt.* files in the current directory
+find . -name '*.txt' | xargs zip -9 txt.zip
 
  
 

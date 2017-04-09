@@ -18,7 +18,14 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
-    raise NotImplementedError
+    if count < 0:
+        return("***Count is invalid ")
+    elif count < 10:
+        return("Number of donuts:", count)
+    else:
+        count = 'many'
+        return("Number of donuts:", count)
+    #raise NotImplementedError
 
 
 def both_ends(s):
@@ -31,14 +38,18 @@ def both_ends(s):
     >>> both_ends('spring')
     'spng'
     >>> both_ends('Hello')
-    'Helo'
+    'Helo' 
     >>> both_ends('a')
     ''
     >>> both_ends('xyz')
     'xyyz'
     """
-    raise NotImplementedError
-
+    if len(s) < 2:
+        return('')
+    else:
+        return(s[:2]+s[-2:])
+    
+    #raise NotImplementedError
 
 def fix_start(s):
     """
@@ -56,7 +67,9 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
-    raise NotImplementedError
+    return(s[:1]+s[1:].replace(s[:1], '*'))
+
+    #raise NotImplementedError
 
 
 def mix_up(a, b):
@@ -74,7 +87,9 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
-    raise NotImplementedError
+    return(b[:2]+a[2:], a[:2]+b[2:], )
+
+    #raise NotImplementedError
 
 
 def verbing(s):
@@ -91,8 +106,14 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
-    raise NotImplementedError
-
+    if len(s) < 3:
+        return(s)
+    elif (s[-3:] == 'ing'):
+        return(s[:]+'ly')
+    else:
+        return(s[:]+'ing')
+    
+    #raise NotImplementedError
 
 def not_bad(s):
     """
@@ -111,7 +132,17 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
-    raise NotImplementedError
+    str1 = 'not'
+    str2 = 'bad'
+    if (str1 in s and str2 in s):
+        if (s.index(str1) < s.index(str2)):
+            return(s.replace(s[s.index(str1):s.index(str2)+len(str2)], 'good'))
+        else:
+            return(s)
+    else:
+        return(s)
+    
+    #raise NotImplementedError
 
 
 def front_back(a, b):
@@ -123,11 +154,17 @@ def front_back(a, b):
     strings, a and b, return a string of the form a-front + b-front +
     a-back + b-back
 
-    >>> front_back('abcd', 'xy')
+     >>> front_back('abcd', 'xy')
     'abxcdy'
     >>> front_back('abcde', 'xyz')
     'abcxydez'
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
-    raise NotImplementedError
+    import math
+    
+    front = a[:math.ceil(len(a)/2)] + b[:math.ceil(len(b)/2)]
+    back = a[math.ceil(len(a)/2):]+b[math.ceil(len(b)/2):]
+
+    return(front+back)
+    #raise NotImplementedError
